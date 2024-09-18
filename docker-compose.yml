@@ -9,6 +9,7 @@ services:
       - ./backend/.env 
     networks:
       - app-network 
+    command: sh -c "npm install mongoose && node ./backend/seeder.js"
     
   frontend:
     build: ./frontend
